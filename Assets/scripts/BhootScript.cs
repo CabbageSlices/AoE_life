@@ -20,7 +20,7 @@ public class BhootScript : MonoBehaviour
     void Update()
     {   
         var distance = transform.position - TargetObject.position;
-        if (Mathf.Abs(distance.x) + Mathf.Abs(distance.y) < followDistance){
+        if (distance.magnitude < followDistance){
             transform.position = Vector2.Lerp(transform.position, TargetObject.position, Time.deltaTime);
         }
         else {
