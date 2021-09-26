@@ -72,4 +72,12 @@ public class MainChar : MonoBehaviour
             startDying();
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (!isDead && controller.gameStarted && other.gameObject.tag == "deathThing")
+        {
+            startDying();
+        }
+    }
 }

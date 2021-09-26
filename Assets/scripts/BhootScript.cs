@@ -19,15 +19,23 @@ public class BhootScript : MonoBehaviour
         bhoot = GetComponent<Rigidbody2D>();
     }
 
+    private void Awake()
+    {
+        if (!TargetObject)
+            TargetObject = GameObject.FindWithTag("player").transform;
+    }
+
     // Update is called once per frame
     void Update()
-    {   
+    {
         var distance = TargetObject.position - transform.position;
-        if (distance.magnitude < followDistance){
+        if (distance.magnitude < followDistance)
+        {
             var bhootToPlayerVector = distance.normalized;
             bhoot.velocity = new Vector3(bhootToPlayerVector.x * speed, bhootToPlayerVector.y * speed, 0f);
         }
-        else {
+        else
+        {
             bhoot.velocity = Random.insideUnitCircle * speed;
         }
     }

@@ -1134,6 +1134,8 @@ MonoBehaviour:
   playerLight: {fileID: 0}
   playerPickupParticleEmitter: {fileID: 0}
   playerSfxSource: {fileID: 0}
+  director: {fileID: 0}
+  exitGameplayCutscene: {fileID: 0}
 --- !u!4 &242741102
 Transform:
   m_ObjectHideFlags: 0
@@ -3770,8 +3772,8 @@ MonoBehaviour:
   - {x: -0.3833182, y: 0.49443483, z: 0}
   - {x: -0.44886884, y: 0.5073759, z: 0}
   m_ShapePathHash: -75133459
-  m_Mesh: {fileID: 1634896298}
-  m_InstanceId: 82746
+  m_Mesh: {fileID: 1636393335}
+  m_InstanceId: 125738
 --- !u!61 &1223389724
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4477,7 +4479,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -1
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 0.2264151, g: 0.2264151, b: 0.2264151, a: 1}
+  m_Color: {r: 0.27554289, g: 0.39423046, b: 0.4528302, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4801,7 +4803,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!43 &1634896298
+--- !u!43 &1636393335
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

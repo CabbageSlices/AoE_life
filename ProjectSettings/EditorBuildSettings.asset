@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/HospitalIntro.unity
     guid: f59d0aaed0cdf214bb187bec6eba7dd2
   - enabled: 1
-    path: Assets/Scenes/FinalInGame.unity
-    guid: a31e8928e6370b44c8e42ead939cf82e
+    path: Assets/Scenes/TESTBED.unity
+    guid: 6e33e9fcd86228c4e86fa3011c028cad
   - enabled: 1
     path: Assets/Scenes/HospitalDeath.unity
     guid: 484c8a842e4f33140a470df694dc5dbe
