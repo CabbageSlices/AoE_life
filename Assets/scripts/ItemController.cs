@@ -29,11 +29,13 @@ public class ItemController : MonoBehaviour
             return;
         }
 
-        triggered = true;
-        if (other.gameObject.tag == "player")
+        if (other.gameObject.tag != "player")
         {
-            controller.onItemPickup();
+            return;
         }
+
+        controller.onItemPickup();
+        triggered = true;
 
         Destroy(gameObject);
     }
