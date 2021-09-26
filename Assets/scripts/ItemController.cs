@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PickupOnCollision : MonoBehaviour
+public class ItemController : MonoBehaviour
 {
     public GameController controller;
     bool triggered = false;
@@ -25,7 +25,6 @@ public class PickupOnCollision : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("COLLISION: " + other.gameObject.tag);
         if (triggered)
         {
             return;

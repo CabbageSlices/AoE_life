@@ -21,6 +21,8 @@ public class GameController : MonoBehaviour
 
     public ParticleSystem playerPickupParticleEmitter;
 
+    public AudioSource playerSfxSource;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -60,5 +62,7 @@ public class GameController : MonoBehaviour
 
 
         playerPickupParticleEmitter.Emit(400);
+
+        playerSfxSource.Play();
     }
 }
