@@ -13,7 +13,7 @@ public class GameController : MonoBehaviour
 
     public LifeDisplayController lifeDisplay;
 
-    public bool gameStarted = true;
+    public bool gameStarted = false;
 
     public Light2D playerLight;
 
