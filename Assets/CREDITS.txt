@@ -10,3 +10,5 @@ heart monitor: https://www.videvo.net/sound-effect/tones-hospital-heart-monitor-
 wooshing sound effect: https://app.soundstripe.com/sfx/53320
 
 hospital bgm after death: https://freesound.org/people/klankbeeld/sounds/400635/
+
+flatline: https://www.zapsplat.com/music/hospital-heart-rate-monitor-1-irregular-beeps-then-flatline/
