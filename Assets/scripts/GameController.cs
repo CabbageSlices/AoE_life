@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 using UnityEngine.Experimental.Rendering.Universal;
 
 public class GameController : MonoBehaviour
@@ -22,6 +23,10 @@ public class GameController : MonoBehaviour
     public ParticleSystem playerPickupParticleEmitter;
 
     public AudioSource playerSfxSource;
+
+    public PlayableDirector director;
+
+    public PlayableAsset exitGameplayCutscene;
 
     // Start is called before the first frame update
     void Start()
@@ -64,5 +69,21 @@ public class GameController : MonoBehaviour
         playerPickupParticleEmitter.Emit(400);
 
         playerSfxSource.Play();
+    }
+
+    public void onPlayerDeath()
+    {
+        var emitParams = new ParticleSystem.EmitParams();
+        emitParams.startColor = new Color32(0, 0, 0, 125);
+        emitParams.startSize = 0.5f;
+        playerPickupParticleEmitter.Emit(emitParams, 400);
+
+        playExitGameplayAniamtion();
+    }
+
+    public void playExitGameplayAniamtion()
+    {
+        director.gameObject.SetActive(true);
+        director.Play(exitGameplayCutscene);
     }
 }

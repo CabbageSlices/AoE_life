@@ -8,3 +8,5 @@ SOUNDS: zapslapt.com
 heart monitor: https://www.videvo.net/sound-effect/tones-hospital-heart-monitor-bb03-08060/767778/
 
 wooshing sound effect: https://app.soundstripe.com/sfx/53320
+
+hospital bgm after death: https://freesound.org/people/klankbeeld/sounds/400635/

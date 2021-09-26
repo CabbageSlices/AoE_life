@@ -8,6 +8,10 @@ public class MainChar : MonoBehaviour
     public Rigidbody2D player;
     public float moveSpeed = 10f;
     public GameController controller;
+    public bool isDead = false;
+
+    public Animator animator;
+
     // Update is called once per frame
     void Start()
     {
@@ -20,10 +24,23 @@ public class MainChar : MonoBehaviour
         {
             controller = GameObject.FindWithTag("gameController").GetComponent<GameController>();
         }
+
+        if (animator == null)
+        {
+            animator = GetComponent<Animator>();
+        }
     }
     void Update()
     {
-        player.velocity = new Vector3(moveSpeed * Input.GetAxis("Horizontal"), moveSpeed * Input.GetAxis("Vertical"), 0f);
+        if (controller.gameStarted && !isDead)
+        {
+
+            player.velocity = new Vector3(moveSpeed * Input.GetAxis("Horizontal"), moveSpeed * Input.GetAxis("Vertical"), 0f);
+        }
+        else
+        {
+            player.velocity = Vector3.zero;
+        }
 
     }
 
@@ -33,6 +50,26 @@ public class MainChar : MonoBehaviour
         {
 
             Camera.main.transform.position = transform.position - new Vector3(0, 0, 10);
+        }
+    }
+
+    public void finishDying()
+    {
+        controller.onPlayerDeath();
+    }
+
+    public void startDying()
+    {
+        isDead = true;
+        animator.Play("dying");
+        player.velocity = Vector3.zero;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (!isDead && controller.gameStarted && other.tag == "deathThing")
+        {
+            startDying();
         }
     }
 }
