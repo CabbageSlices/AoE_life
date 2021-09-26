@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - heart
+  - heartValueDisplay
+  - pickup
+  - enemy
+  - player
+  - gameController
   layers:
   - Default
   - TransparentFX
@@ -43,4 +49,7 @@ TagManager:
     locked: 0
   - name: Background
     uniqueID: 3472701291
+    locked: 0
+  - name: UI
+    uniqueID: 2605470933
     locked: 0
