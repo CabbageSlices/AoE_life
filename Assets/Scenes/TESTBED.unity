@@ -1496,7 +1496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c99d5a016e8367c4bb575c090076f25a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLimitInSeconds: 100
+  timeLimitInSeconds: 600
   timeElapsed: 0
   numItemsToSpawn: 1
   numItemsPickedUp: 0

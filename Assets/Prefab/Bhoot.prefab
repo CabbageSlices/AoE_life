@@ -9772,8 +9772,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TargetObject: {fileID: 0}
   bhoot: {fileID: 0}
-  speed: 4.5
-  followDistance: 5
+  speed: 5.5
+  followDistance: 7.5
 --- !u!50 &622846936
 Rigidbody2D:
   serializedVersion: 4
