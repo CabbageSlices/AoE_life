@@ -24,7 +24,7 @@ public class ItemController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (triggered)
+        if (triggered || !controller.gameStarted)
         {
             return;
         }
