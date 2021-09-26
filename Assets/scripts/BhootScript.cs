@@ -5,27 +5,30 @@ using UnityEngine;
 public class BhootScript : MonoBehaviour
 {
     public Transform TargetObject;
+    public Rigidbody2D bhoot;
 
-    float speed = 10.0F;
-    float followDistance = 5.0F;
+    [SerializeField]
+    public float speed = 10.0F;
+    [SerializeField]
+    public float followDistance = 5.0F;
     Vector3 velocity;
 
     // Start is called before the first frame update
     private void Start()
     {
-
+        bhoot = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {   
-        var distance = transform.position - TargetObject.position;
+        var distance = TargetObject.position - transform.position;
         if (distance.magnitude < followDistance){
-            transform.position = Vector2.Lerp(transform.position, TargetObject.position, Time.deltaTime);
+            var bhootToPlayerVector = distance.normalized;
+            bhoot.velocity = new Vector3(bhootToPlayerVector.x * speed, bhootToPlayerVector.y * speed, 0f);
         }
         else {
-            velocity = Random.insideUnitCircle * speed;
-            transform.Translate(velocity * Time.deltaTime);        
+            bhoot.velocity = Random.insideUnitCircle * speed;
         }
     }
 }
