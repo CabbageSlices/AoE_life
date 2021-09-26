@@ -20,21 +20,22 @@ public class ItemController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (triggered)
+        if (triggered || !controller.gameStarted)
         {
             return;
         }
 
-        triggered = true;
-        if (other.gameObject.tag == "player")
+        if (other.gameObject.tag != "player")
         {
-            controller.onItemPickup();
+            return;
         }
+
+        controller.onItemPickup();
+        triggered = true;
 
         Destroy(gameObject);
     }

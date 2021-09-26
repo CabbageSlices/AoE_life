@@ -53,3 +53,6 @@ TagManager:
   - name: UI
     uniqueID: 2605470933
     locked: 0
+  - name: monitor
+    uniqueID: 3393890205
+    locked: 0
